@@ -1,4 +1,4 @@
-module.exports = function (aws) {
+module.exports = function (AWS) {
   function sendMail (payload) {
     const params = {
         FunctionName: 'lambda_mail-production-1-0-0',
