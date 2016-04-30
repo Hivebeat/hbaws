@@ -1,0 +1,19 @@
+{
+  "name": "hb-aws",
+  "version": "0.0.1",
+  "description": "Extremely small wrapper for our common aws functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "n/a"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hivebeat/hbaws.git"
+  },
+  "author": "Emil Hagbarth",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/Hivebeat/hbaws/issues"
+  },
+  "homepage": "https://github.com/Hivebeat/hbaws#readme"
+}
