@@ -17,5 +17,8 @@ module.exports = function (aws) {
             })
       })
   }
+  return {
+    sendMail: sendMail
+  }
 }
 
