@@ -35,11 +35,33 @@ module.exports = function(AWS) {
         return resolve(data)
       })
     })
+
+
+    const sqs = {
+      queues: {
+        exporting: {
+          sendMessage: function() {
+            var params = {
+              MessageBody: JSON.stringify(message),
+              QueueUrl: 'https://sqs.eu-west-1.amazonaws.com/509982192577/exporting',
+              DelaySeconds: 0,
+            }
+            return new Promise((resolve, reject) => {
+              sqs.sendMessage(params, function(err, data) {
+                if (err) return reject(err)
+                return resolve(data)
+              });
+            })
+          }
+        }
+      }
+    }
   }
 
 
   return {
-      sendMail: sendMail,
-      lambda: lambda
+    sendMail: sendMail,
+    lambda: lambda,
+    sqs: sqs
   }
 }
