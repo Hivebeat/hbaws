@@ -1,6 +1,6 @@
 {
   "name": "@hivebeat/hb-aws",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Extremely small wrapper for our common aws functions",
   "main": "index.js",
   "scripts": {
