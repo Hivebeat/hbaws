@@ -39,6 +39,7 @@ module.exports = function(AWS) {
 
 
   return {
-      sendMail: sendMail
+      sendMail: sendMail,
+      lambda: lambda
   }
 }
