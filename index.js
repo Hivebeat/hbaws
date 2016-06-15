@@ -40,7 +40,7 @@ module.exports = function(AWS) {
     const sqs = {
       queues: {
         exporting: {
-          sendMessage: function() {
+          sendMessage: function(message) {
             var params = {
               MessageBody: JSON.stringify(message),
               QueueUrl: 'https://sqs.eu-west-1.amazonaws.com/509982192577/exporting',
