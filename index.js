@@ -47,6 +47,7 @@ module.exports = function(AWS) {
               DelaySeconds: 0,
             }
             return new Promise((resolve, reject) => {
+              var sqs = new AWS.SQS({apiVersion: '2012-11-05'})
               sqs.sendMessage(params, function(err, data) {
                 if (err) return reject(err)
                 return resolve(data)
