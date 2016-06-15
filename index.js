@@ -35,7 +35,7 @@ module.exports = function(AWS) {
         return resolve(data)
       })
     })
-
+  }
 
     const sqs = {
       queues: {
@@ -51,14 +51,12 @@ module.exports = function(AWS) {
               _sqs.sendMessage(params, function(err, data) {
                 if (err) return reject(err)
                 return resolve(data)
-              });
-            })
-          }
+            });
+          })
         }
       }
     }
   }
-
 
   return {
     sendMail: sendMail,
